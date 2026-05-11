@@ -70,6 +70,7 @@ export function ReelModal({ reel, onClose }: ReelModalProps) {
           <video
             ref={videoRef}
             src={reel.videoSrc}
+            poster={reel.posterSrc}
             className="w-full h-full object-cover md:rounded-lg shadow-2xl"
             autoPlay
             loop

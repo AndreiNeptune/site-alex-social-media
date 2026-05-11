@@ -26,10 +26,6 @@ export function ReelCard({ reel, onClick }: ReelCardProps) {
 
   const handleMouseLeave = () => {
     setIsHovered(false);
-    if (videoRef.current) {
-      videoRef.current.pause();
-      videoRef.current.currentTime = 0;
-    }
   };
 
   return (
@@ -43,25 +39,17 @@ export function ReelCard({ reel, onClick }: ReelCardProps) {
       transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
     >
       <div className="absolute inset-0 overflow-hidden shadow-2xl">
-        {/* Poster layer */}
-        <motion.img
-          src={reel.posterSrc}
-          alt={reel.title}
-          className={cn(
-            "absolute inset-0 h-full w-full object-cover transition-opacity duration-700 brightness-75 contrast-125 grayscale-[30%]",
-            isHovered ? "opacity-0" : "opacity-100"
-          )}
-        />
-        
-        {/* Video layer */}
+        {/* Video layer with native poster and autoplay */}
         <video
           ref={videoRef}
           src={reel.videoSrc}
-          className="absolute inset-0 h-full w-full object-cover brightness-75 contrast-125 grayscale-[20%]"
+          poster={reel.posterSrc}
+          className="absolute inset-0 h-full w-full object-cover brightness-75 contrast-125 grayscale-[20%] transition-transform duration-700 group-hover:scale-105"
           muted
           loop
           playsInline
-          preload="none"
+          autoPlay
+          preload="auto"
         />
 
         {/* Heavy Cinematic Vignette */}

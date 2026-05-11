@@ -108,7 +108,7 @@ export const mockReels: Reel[] = [
     category: "gen-z",
     subCategory: "Awareness Engine",
     videoSrc: "https://videos.pexels.com/video-files/3129957/3129957-uhd_2560_1440_25fps.mp4",
-    posterSrc: "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    posterSrc: "https://images.pexels.com/videos/3129957/free-video-3129957.jpg",
     client: "NextGen Fintech",
     niche: "Fintech Startup",
     views: "1.8M",
