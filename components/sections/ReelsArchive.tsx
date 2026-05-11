@@ -35,13 +35,13 @@ export function ReelsArchive() {
             <motion.span 
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              className="text-[10px] md:text-xs tracking-[0.5em] text-white/30 uppercase mb-8 block"
+              className="text-[10px] md:text-xs tracking-[0.5em] text-white/50 uppercase mb-8 block"
             >
               The Archive
             </motion.span>
             <h2 className="text-4xl md:text-6xl font-display font-medium tracking-tight text-white leading-tight">
               A curated system of <br />
-              <span className="italic opacity-60">attention engineering.</span>
+              <span className="italic opacity-80">attention engineering.</span>
             </h2>
           </div>
           
@@ -52,18 +52,18 @@ export function ReelsArchive() {
                 onClick={() => setActiveCategory(cat as any)}
                 className={cn(
                   "text-[10px] md:text-xs tracking-[0.3em] uppercase transition-all duration-700 relative pb-2 group",
-                  activeCategory === cat ? "text-white" : "text-white/30 hover:text-white/60"
+                  activeCategory === cat ? "text-white" : "text-white/50 hover:text-white/80"
                 )}
               >
                 <span className="relative z-10">{cat === "all" ? "All" : cat === "gen-z" ? "Gen Z" : "Pro"}</span>
                 {activeCategory === cat && (
                   <motion.div 
                     layoutId="activeFilter"
-                    className="absolute bottom-0 left-0 w-full h-[1px] bg-white/40"
+                    className="absolute bottom-0 left-0 w-full h-[1px] bg-white/60"
                     transition={{ type: "spring", stiffness: 300, damping: 30 }}
                   />
                 )}
-                <div className="absolute bottom-0 left-0 w-0 h-[1px] bg-white/10 group-hover:w-full transition-all duration-700" />
+                <div className="absolute bottom-0 left-0 w-0 h-[1px] bg-white/20 group-hover:w-full transition-all duration-700" />
               </button>
             ))}
           </div>

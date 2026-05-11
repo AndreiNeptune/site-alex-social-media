@@ -57,8 +57,8 @@ export function CategorySplit() {
           </h2>
           <div className="mt-8 flex flex-col items-center gap-4">
             <div className="w-[1px] h-12 bg-white/20" />
-            <p className="text-xs tracking-[0.2em] text-white/50 uppercase max-w-[200px]">
-              Luxury. Cinematic. Timeless.
+            <p className="text-xs tracking-[0.2em] text-white/50 uppercase max-w-[280px]">
+              We engineer digital ecosystems, not just services. Luxury. Cinematic. Timeless.
             </p>
           </div>
         </motion.div>

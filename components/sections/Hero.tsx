@@ -70,7 +70,7 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 2 }}
-          className="mt-4 text-[10px] md:text-xs tracking-[0.4em] uppercase text-white/40 font-light"
+          className="mt-4 text-[10px] md:text-xs tracking-[0.4em] uppercase text-white/60 font-light"
         >
           Engineering Human Attention
         </motion.p>

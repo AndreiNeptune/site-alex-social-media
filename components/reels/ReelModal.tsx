@@ -15,6 +15,18 @@ export function ReelModal({ reel, onClose }: ReelModalProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const { playImpact } = useCinematicSound();
 
+  // Handle Escape key
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        onClose();
+      }
+    };
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [onClose]);
+
+  // Handle body scroll lock and entry sound
   useEffect(() => {
     document.body.style.overflow = "hidden";
     playImpact();
@@ -70,7 +82,10 @@ export function ReelModal({ reel, onClose }: ReelModalProps) {
       </motion.div>
 
       {/* Breakdown Panel (Right) */}
-      <div className="w-full h-[50vh] md:w-[55%] md:h-full overflow-y-auto px-6 py-12 md:p-24 hide-scrollbar">
+      <div 
+        data-lenis-prevent
+        className="w-full h-[50vh] md:w-[55%] md:h-full overflow-y-auto px-6 py-12 md:p-24 hide-scrollbar"
+      >
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}

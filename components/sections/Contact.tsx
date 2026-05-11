@@ -15,13 +15,13 @@ export function Contact() {
 
         <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-6 md:gap-8">
           <MagneticButton>
-            <a href="#" className="w-full h-full inline-block">Instagram</a>
+            <a href="https://instagram.com/alexandrubalasoiu.ro" target="_blank" rel="noopener noreferrer" className="w-full h-full inline-block">Instagram</a>
           </MagneticButton>
           <MagneticButton>
-            <a href="mailto:hello@example.com" className="w-full h-full inline-block">Email</a>
+            <a href="mailto:contact@upscaleinnovation.com" className="w-full h-full inline-block">Email</a>
           </MagneticButton>
           <MagneticButton>
-            <a href="#" className="w-full h-full inline-block">WhatsApp</a>
+            <a href="https://wa.me/40775284225" target="_blank" rel="noopener noreferrer" className="w-full h-full inline-block">WhatsApp</a>
           </MagneticButton>
           <MagneticButton className="bg-white text-black hover:bg-white/80 border-transparent">
             <a href="#" className="w-full h-full inline-block">Book a call</a>
